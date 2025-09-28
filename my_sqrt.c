@@ -72,25 +72,39 @@ int my_sqrt(int n)
 
 int main(int argc, char **argv)
 {
-
-    if (argc < 2)
+    if (argc != 2)
     {
+        write(1, "Error!\n(There need to be 2 arguments)\n", 38);
         return 1;
+    }
+
+    int i = 0;
+
+    if(argv[1][0] == '\0')
+    {
+            write(1, "Error!\nInvalid input!\n", 22);
+            return 1;
+    }
+
+    while (argv[1][i] != '\0')
+    {
+        if (argv[1][i] < '0' || argv[1][i] > '9')
+        {
+            write(1, "Error!\nInvalid input!\n", 22);
+            return 1;
+        }
+        i++;
     }
 
     int number = ft_atoi(argv[1]);
 
-    if (number < 0)
-    {
-        write (1, "Error! Invalid Input!\n", 22);
-        return 1;
-    }
     int result = my_sqrt(number);
 
     write (1, "Square root of ", 15);
     ft_putnbr(number);
     write (1, " is: ", 5);
     ft_putnbr (result);
+    ft_putchar('\n');
 
     return 0;
 }
