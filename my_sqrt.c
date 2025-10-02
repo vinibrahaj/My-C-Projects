@@ -36,13 +36,12 @@ int ft_atoi(char *str)
         i++;
     }
     //Handle sign
-    if (str[i] == '-')
+    if (str[i] == '-' || str[i] == '+')
     {
-        sign = -1;
-        i++;
-    }
-    else if (str[i] == '+')
-    {
+        if(str[i] == '-')
+        {
+            sign = -1;
+        }
         i++;
     }
     // Converting digits
@@ -56,7 +55,7 @@ int ft_atoi(char *str)
 
 int my_sqrt(int n)
 {
-    if (n < 0) 
+    if (n < 0)
     return 0;
 
     if (n == 0 || n == 1) 
@@ -80,20 +79,13 @@ int main(int argc, char **argv)
 
     int i = 0;
 
-    if(argv[1][0] == '\0')
-    {
-            write(1, "Error!\nInvalid input!\n", 22);
-            return 1;
-    }
-
-    while (argv[1][i] != '\0')
+    if(argv[1][0] == '\0' || argv[1][0] != '\0')
     {
         if (argv[1][i] < '0' || argv[1][i] > '9')
         {
             write(1, "Error!\nInvalid input!\n", 22);
             return 1;
         }
-        i++;
     }
 
     int number = ft_atoi(argv[1]);
