@@ -79,15 +79,6 @@ int main(int argc, char **argv)
 
     int i = 0;
 
-    if(argv[1][0] == '\0' || argv[1][0] != '\0')
-    {
-        if (argv[1][i] < '0' || argv[1][i] > '9')
-        {
-            write(1, "Error!\nInvalid input!\n", 22);
-            return 1;
-        }
-    }
-
     int number = ft_atoi(argv[1]);
 
     int result = my_sqrt(number);
@@ -99,4 +90,5 @@ int main(int argc, char **argv)
     ft_putchar('\n');
 
     return 0;
+
 }
