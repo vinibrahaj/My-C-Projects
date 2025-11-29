@@ -1,2 +1,2 @@
 # My-C-Projects
-These are my C projects!
+These are all the functions and programs that I was able to learn and recreate in my 42 Journey!
