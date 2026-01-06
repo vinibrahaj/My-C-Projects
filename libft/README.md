@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# My-C-Projects
-These are all the functions and programs that I was able to learn and recreate in my 42 Journey!
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,4 +58,3 @@ These contributions were applied primarily to documentation drafting, code forma
 
 </body>
 </html>
->>>>>>> libft/main
